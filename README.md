@@ -67,8 +67,6 @@ The main objectives are:
 Created automated macro system:
 VBA Macros: Developed an automated system to export ETF tables to CSV and import into a MySQL database (etf_portfolio.etfs) with proper column mapping, data type alignment, and duplicate row handling—no manual SQL required. Event-driven logic refreshes results and clears outputs when ticker input is empty. Configured ODBC 64-bit drivers and Connector/NET for seamless database connectivity.
 
-Power BI Dashboards: Imported CSV data, performed cleaning in Power Query, created DAX measures, and built interactive dashboards with KPI cards, line charts (price trends), column charts (volume analysis), and slicers (ticker, date) to simulate real financial data ingestion pipelines and provide executive-level insights.
-
 **Power BI Dashboards**
 Imported ETF CSV data into Power BI, performed data cleaning in Power Query, and built DAX measures to create interactive dashboards. Designed visuals include KPI cards, line charts (price trends), column charts (volume analysis), and slicers (ticker, date) for dynamic filtering. Enabled professional-level visualization and simulation of real BI environments for executive insights.
 
