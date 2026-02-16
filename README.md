@@ -10,7 +10,9 @@ Excel SME | Data Automation Specialist
 
 ## 📌 Project Goal
 
-This project demonstrates an **end-to-end stock market analytics and automation solution** using real-world NASDAQ historical data.  
+This project demonstrates an **end-to-end stock market analytics and automation solution** using real-world NASDAQ historical data.
+https://www.kaggle.com/datasets/jacksoncrow/stock-market-dataset?resource=download
+
 The main objectives are:
 
 - Consolidate and clean **thousands of ticker-level CSV files** (stocks + ETFs) using Excel Power Query.
@@ -53,33 +55,66 @@ The main objectives are:
 **Excel & Power Query**
 - Import thousands of CSV files and append into a single data table.
 - Data cleaning: remove blanks, errors, normalize tickers (upper/lower), merge metadata.
-- Advanced formulas: `SUMIFS`, `IFS`, `XLOOKUP`, nested IFs, `UPPER/LOWER`, `SEARCH`.
+- Advanced formulas: `SUMIFS`, `IFS`, `XLOOKUP`, Filter, nested IFs, `UPPER/LOWER/PROPER`, Unique, `SEARCH`.
 - Pivot tables, conditional formatting, data validation, sorting, and filtering.
 - Calculated KPIs: Daily Return, Rolling 30-Day Avg, Cumulative Volume, Volatility ranking.
 
 **VBA Automation**
-- Auto-refresh queries and data model.
-- Import new files automatically from folder.
-- Export dashboards to PDF.
-- Event-driven triggers for workflow automation.
+Created automated macro system:
+
+✔ Button: "Export to CSV and import to MySQL Database"
+Exports ETFs Table to CSV
+Excludes calculated columns
+Macro imports CSV into MySQL
+Automated execution
+No manual SQL needed
+Row Duplicate handling included
+
+✔ Event-driven logic
+Clears results if ticker input is empty
+Refresh logic triggered automatically
+
+This simulates real financial data ingestion pipelines.
 
 **SQL (MySQL)**
-- Ranking top gainers/losers per month.
-- Rolling 7-day and 30-day averages per ticker.
-- Cumulative volume per ticker.
-- Sector-level performance and volatility analysis.
-- Year-to-date returns.
+Database: etf_portfolio
+Table: etfs
+
+Automated CSV export
+Automated Imported into MySQL table via macro
+Proper column mapping
+Data types aligned
+
+Handled:
+ODBC 64-bit driver configuration
+Connector/NET requirement
+Driver troubleshooting
 
 **Power BI Dashboards**
-- Interactive KPI cards: Total Volume, Average Daily Return, Top Gainer/Loser.
-- Combo charts: Price + Volume + Rolling Average.
-- Waterfall chart: Month-over-month sector performance.
-- Heatmap Matrix: Tickers vs Months colored by daily return.
-- Drillthrough for detailed ticker analysis.
-- Slicers for dynamic filtering (Ticker, Sector, Date).
-- Play axis animation for market trends.
+Imported ETF CSV into Power BI.
 
-**Power Automate**
+Steps:
+Get Data → CSV
+Data cleaning in Power Query (Power BI)
+Built DAX measures
+Created visual dashboards
+
+Visuals Created:
+
+✔ KPI Cards
+✔ Line charts (Price trends)
+✔ Column charts (Volume analysis)
+✔ Slicers (Ticker, Date)
+✔ Interactive filtering
+
+Why Power BI?
+Professional visualization layer
+Advanced DAX calculations
+Better executive-level presentation
+Real BI environment simulation
+
+**Power Automate**  
+(TODO)
 - Trigger: New CSV or database update.
 - Refresh Excel + Power Query + Power Pivot.
 - Export dashboards automatically.
@@ -103,20 +138,15 @@ nasdaq-stock-excel-sme-portfolio/
 
 ├── data/ # raw CSV files
 
-├── excel/Stock_Dashboard.xlsx
+├── excel/Stock_Dashboard.xlsm
 
-├── vba/Automation_Modules.bas
+├── sql/etf_portfolio.sql
 
-├── sql/Advanced_Stock_Queries.sql
-
-├── powerbi/Stock_Market_Report.pbix
+├── powerbi/ETF_Dashboard_POWERBI.pbix, ETF_Dashboard_POWERBI.pdf
 
 ├── screenshots/ # dashboard, Power Query, VBA, Power BI
 
-├── architecture/ # Architecture.png
-
 └── README.md
-
 
 ---
 
