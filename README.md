@@ -19,7 +19,7 @@ The main objectives are:
 - Build an **optimized data model** with Power Pivot for advanced analysis.
 - Apply **Excel advanced formulas** (SUMIFS, IFS, XLOOKUP, nested IFs, upper/lower, data validation, sorting).
 - Automate workflow using **VBA** and **Power Automate** for data import, refresh, and reporting.
-- Perform **advanced analytics** using MySQL (window functions, ranking, rolling averages, cumulative metrics, volatility analysis).
+- Perform **advanced analytics** using MySQL.
 - Build **interactive dashboards** in Excel and Power BI for business insights.
 
 ---
