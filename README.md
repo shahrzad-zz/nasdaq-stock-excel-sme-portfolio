@@ -11,7 +11,8 @@ Excel SME | Data Automation Specialist
 ## 📌 Project Goal
 
 This project demonstrates an **end-to-end stock market analytics and automation solution** using real-world NASDAQ historical data.
-https://www.kaggle.com/datasets/jacksoncrow/stock-market-dataset?resource=download
+
+Dataset: https://www.kaggle.com/datasets/jacksoncrow/stock-market-dataset?resource=download
 
 The main objectives are:
 
