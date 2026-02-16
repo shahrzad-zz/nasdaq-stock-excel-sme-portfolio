@@ -53,26 +53,30 @@ The main objectives are:
 ## 📊 Key Features
 
 **Excel & Power Query**
+📂 As part of the ETL architecture, I designed a scalable folder-based data ingestion system where two main directories — stocks/ and etfs/ — each contain multiple CSV files, with every file representing one ticker and its historical daily price data across different dates (Date, Open, High, Low, Close, Adj Close, Volume). Using Excel Power Query (Data → Get Data → From Folder), I imported entire folders at once rather than loading files individually. Power Query automatically combined the files, extracted content, promoted headers, standardized column names, converted data types (Date to Date, prices to Decimal, Volume to Whole Number), cleaned null rows, and derived the ticker symbol dynamically from the file name. This created unified, structured tables for Stocks and ETFs, enabling automated processing of newly added CSV files without manual intervention.
+
+🔄 After transformation, I appended Stocks and ETFs into a consolidated fact table and merged it with a metadata table (Ticker, Security Name, ...) using Ticker as the join key to enrich the dataset. Instead of loading data to worksheets, I selected “Connection Only + Add to Data Model” to build a relational analytical layer. Loading to the Data Model improves performance, reduces worksheet memory usage, enables relationships, supports DAX calculations, and mirrors enterprise BI architecture. This approach demonstrates scalable data engineering practices, automated ETL workflows, structured modeling, and BI-ready dataset preparation suitable for advanced PivotTables, dashboards, and Power BI reporting.
+
 - Import thousands of CSV files and append into a single data table.
 - Data cleaning: remove blanks, errors, normalize tickers (upper/lower), merge metadata.
 - Advanced formulas: `SUMIFS`, `IFS`, `XLOOKUP`, Filter, nested IFs, `UPPER/LOWER/PROPER`, Unique, `SEARCH`.
 - Pivot tables, conditional formatting, data validation, sorting, and filtering.
-- Calculated KPIs: Daily Return, Rolling 30-Day Avg, Cumulative Volume, Volatility ranking.
+- Calculated KPIs.
 
 **VBA Automation**
 Created automated macro system:
 
-✔ Button: "Export to CSV and import to MySQL Database"
-Exports ETFs Table to CSV
-Excludes calculated columns
-Macro imports CSV into MySQL
-Automated execution
-No manual SQL needed
-Row Duplicate handling included
+✔ Button: "Upload ETFs table to Database (Export to csv file & Import  into MySQL DB"
+  Exports ETFs Table to CSV
+  Excludes calculated columns
+  Macro imports CSV into MySQL
+  Automated execution
+  No manual SQL needed
+  Row Duplicate handling included
 
 ✔ Event-driven logic
-Clears results if ticker input is empty
-Refresh logic triggered automatically
+  Clears results if ticker input is empty
+  Refresh logic triggered automatically
 
 This simulates real financial data ingestion pipelines.
 
@@ -85,15 +89,15 @@ Automated Imported into MySQL table via macro
 Proper column mapping
 Data types aligned
 
-Handled:
-ODBC 64-bit driver configuration
-Connector/NET requirement
-Driver troubleshooting
+✔ Handled:
+  ODBC 64-bit driver configuration
+  Connector/NET requirement
+  Driver troubleshooting
 
 **Power BI Dashboards**
-Imported ETF CSV into Power BI.
+  Imported ETF CSV into Power BI.
 
-Steps:
+✔ Steps:
 Get Data → CSV
 Data cleaning in Power Query (Power BI)
 Built DAX measures
@@ -107,11 +111,11 @@ Visuals Created:
 ✔ Slicers (Ticker, Date)
 ✔ Interactive filtering
 
-Why Power BI?
-Professional visualization layer
-Advanced DAX calculations
-Better executive-level presentation
-Real BI environment simulation
+✔ Why Power BI?
+  Professional visualization layer
+  Advanced DAX calculations
+  Better executive-level presentation
+  Real BI environment simulation
 
 **Power Automate**  
 (TODO)
