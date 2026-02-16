@@ -18,7 +18,7 @@ The main objectives are:
 - Consolidate and clean **thousands of ticker-level CSV files** (stocks + ETFs) using Excel Power Query.
 - Build an **optimized data model** with Power Pivot for advanced analysis.
 - Apply **Excel advanced formulas** (SUMIFS, IFS, XLOOKUP, nested IFs, upper/lower, data validation, sorting).
-- Automate workflow using **VBA** and **Power Automate** for data import, refresh, and reporting.
+- Automate workflow using **VBA** for data import, refresh, and reporting.
 - Perform **advanced analytics** using MySQL.
 - Build **interactive dashboards** in Excel and Power BI for business insights.
 
@@ -70,34 +70,7 @@ VBA Macros: Developed an automated system to export ETF tables to CSV and import
 Power BI Dashboards: Imported CSV data, performed cleaning in Power Query, created DAX measures, and built interactive dashboards with KPI cards, line charts (price trends), column charts (volume analysis), and slicers (ticker, date) to simulate real financial data ingestion pipelines and provide executive-level insights.
 
 **Power BI Dashboards**
-  Imported ETF CSV into Power BI.
-
-✔ Steps:
-Get Data → CSV
-Data cleaning in Power Query (Power BI)
-Built DAX measures
-Created visual dashboards
-
-Visuals Created:
-
-✔ KPI Cards
-✔ Line charts (Price trends)
-✔ Column charts (Volume analysis)
-✔ Slicers (Ticker, Date)
-✔ Interactive filtering
-
-✔ Why Power BI?
-  Professional visualization layer
-  Advanced DAX calculations
-  Better executive-level presentation
-  Real BI environment simulation
-
-**Power Automate**  
-(TODO)
-- Trigger: New CSV or database update.
-- Refresh Excel + Power Query + Power Pivot.
-- Export dashboards automatically.
-- Send automated email reports.
+Imported ETF CSV data into Power BI, performed data cleaning in Power Query, and built DAX measures to create interactive dashboards. Designed visuals include KPI cards, line charts (price trends), column charts (volume analysis), and slicers (ticker, date) for dynamic filtering. Enabled professional-level visualization and simulation of real BI environments for executive insights.
 
 ---
 
