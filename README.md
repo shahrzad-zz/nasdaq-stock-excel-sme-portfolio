@@ -65,34 +65,9 @@ The main objectives are:
 
 **VBA Automation**
 Created automated macro system:
+VBA Macros: Developed an automated system to export ETF tables to CSV and import into a MySQL database (etf_portfolio.etfs) with proper column mapping, data type alignment, and duplicate row handling—no manual SQL required. Event-driven logic refreshes results and clears outputs when ticker input is empty. Configured ODBC 64-bit drivers and Connector/NET for seamless database connectivity.
 
-✔ Button: "Upload ETFs table to Database (Export to csv file & Import  into MySQL DB"
-  Exports ETFs Table to CSV
-  Excludes calculated columns
-  Macro imports CSV into MySQL
-  Automated execution
-  No manual SQL needed
-  Row Duplicate handling included
-
-✔ Event-driven logic
-  Clears results if ticker input is empty
-  Refresh logic triggered automatically
-
-This simulates real financial data ingestion pipelines.
-
-**SQL (MySQL)**
-Database: etf_portfolio
-Table: etfs
-
-Automated CSV export
-Automated Imported into MySQL table via macro
-Proper column mapping
-Data types aligned
-
-✔ Handled:
-  ODBC 64-bit driver configuration
-  Connector/NET requirement
-  Driver troubleshooting
+Power BI Dashboards: Imported CSV data, performed cleaning in Power Query, created DAX measures, and built interactive dashboards with KPI cards, line charts (price trends), column charts (volume analysis), and slicers (ticker, date) to simulate real financial data ingestion pipelines and provide executive-level insights.
 
 **Power BI Dashboards**
   Imported ETF CSV into Power BI.
