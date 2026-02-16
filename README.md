@@ -30,7 +30,7 @@ The main objectives are:
 - **Structure:**  
   - CSV files per ticker under `stocks/` and `etfs/` folders  
   - Columns: `Date, Open, High, Low, Close, Adj Close, Volume`  
-  - Metadata: `symbols_valid_meta.csv` (Ticker, Full Name, Sector, Type)
+  - Metadata: `symbols_valid_meta.csv` (Symbol, Security Name, )
 
 - **Business Use Case:** Transform raw stock market data into actionable insights and automate reporting for investment analysis.
 
